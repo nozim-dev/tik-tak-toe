@@ -13,7 +13,6 @@ body {
   background-size: 100vw 100vh;
 }
 .container {
-  display: grid;
   max-width: 420px;
   justify-content: center;
   align-items: center;
@@ -114,7 +113,7 @@ body {
   transition: all 0.3s;
   background-color: #e7e7e7;
 }
-.winMessage_active{
+.winMessage_active {
   padding: 12px;
 }
 .no-click {
@@ -130,5 +129,21 @@ body {
   }
   to {
     color: red;
+  }
+}
+@media screen and (max-width: 750px) {
+  body {
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container{
+    width: 280px;
+  }
+  .grid {
+    width: 90px;
+    height: 90px;
   }
 }
