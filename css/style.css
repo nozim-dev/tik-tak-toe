@@ -131,7 +131,7 @@ body {
     color: red;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1050px) {
   body {
     background-size: cover;
     height: 100vh;
