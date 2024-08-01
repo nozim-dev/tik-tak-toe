@@ -1,0 +1,134 @@
+:root {
+  --xColor: rgb(74, 74, 74);
+  --OColor: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #14bdac;
+  background: url("../img/rainforest-7351.gif") no-repeat;
+  background-size: 100vw 100vh;
+}
+.container {
+  display: grid;
+  max-width: 420px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6%;
+  background-color: #ffffff81;
+  backdrop-filter: brightness(50%);
+  border-radius: 6px;
+}
+.grid {
+  width: 140px;
+  height: 140px;
+  padding: 8px;
+  border: 2px solid gray;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  font-size: 0;
+  transition: all 0.2s;
+}
+.active {
+  font-size: 72px;
+  transition: all 0.2s;
+}
+.x {
+  color: var(--xColor);
+}
+.o {
+  color: var(--OColor);
+}
+.grid:nth-of-type(1) {
+  border-top: none;
+  border-left: none;
+}
+.grid:nth-of-type(2) {
+  border-top: none;
+}
+.grid:nth-of-type(3) {
+  border-top: none;
+  border-right: none;
+}
+.grid:nth-of-type(4) {
+  border-left: none;
+}
+.grid:nth-of-type(6) {
+  border-right: none;
+}
+.grid:nth-of-type(7) {
+  border-bottom: none;
+  border-left: none;
+}
+.grid:nth-of-type(8) {
+  border-bottom: none;
+}
+.grid:nth-of-type(9) {
+  border-right: none;
+  border-bottom: none;
+}
+.actions_button {
+  max-width: 450px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.win_message {
+  font-size: 32px;
+  color: #fff;
+  padding: 0;
+  border-radius: 8px;
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.restart_btn {
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-variant: small-caps;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 16px 18px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.restart_btn:hover {
+  transition: all 0.3s;
+  background-color: #e7e7e7;
+}
+.winMessage_active{
+  padding: 12px;
+}
+.no-click {
+  pointer-events: none;
+}
+.win {
+  color: red;
+  animation: winAnimation 0.5s linear 2;
+}
+@keyframes winAnimation {
+  from {
+    color: transparent;
+  }
+  to {
+    color: red;
+  }
+}
